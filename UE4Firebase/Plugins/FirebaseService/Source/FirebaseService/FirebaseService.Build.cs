@@ -1,5 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
+using System;
+using System.IO;
 using UnrealBuildTool;
 
 public class FirebaseService : ModuleRules
@@ -13,11 +15,11 @@ public class FirebaseService : ModuleRules
 				// ... add public include paths required here ...
 			}
 			);
-				
-		
-		PrivateIncludePaths.AddRange(
-			new string[] {
-				// ... add other private include paths required here ...
+
+
+        PrivateIncludePaths.AddRange(
+            new string[] {
+                Path.Combine(ModuleDirectory, "Private")
 			}
 			);
 			
@@ -26,6 +28,7 @@ public class FirebaseService : ModuleRules
 			new string[]
 			{
 				"Core",
+                "FirebaseServiceThirdPatry"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

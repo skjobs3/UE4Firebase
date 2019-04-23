@@ -72,3 +72,6 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Ignore firebase SDK
+Plugins/FirebaseService/Source/ThirdParty/firebase_cpp_sdk/*
